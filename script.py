@@ -6,7 +6,6 @@ title = input("Enter movie title: ")
 PARAMS = {'t':title}
 r = requests.get(url = url, params = PARAMS)
 data = r.json()
-print(data)
 if(data['Response'] == 'False'):
   print(data['Error'])
   exit()
